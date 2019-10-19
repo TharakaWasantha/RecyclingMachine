@@ -1,5 +1,6 @@
 package com.perisic.peripherals;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -63,10 +64,31 @@ public class RecyclingGUI extends JFrame implements ActionListener  {
 		super();
 		setSize(400, 200);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
-		JPanel panel = new JPanel(); 
-		panel.add(slot1); 
+		JPanel panel = new JPanel();
+		
+		 
+		slot1.setBounds(10, 20, 130, 34);
+		slot1.setBackground(new Color(1,149,135));
+		slot1.setForeground(new Color(255,255,255));
+		panel.add(slot1);
+		
+		
+		slot2.setBounds(10, 20, 130, 34);
+		slot2.setBackground(new Color(1,149,135));
+		slot2.setForeground(new Color(255,255,255));
 		panel.add(slot2);
-		panel.add(slot3); 
+		
+		
+		
+		slot3.setBounds(10, 20, 130, 34);
+		slot3.setBackground(new Color(1,149,135));
+		slot3.setForeground(new Color(255,255,255));
+		panel.add(slot3);
+		
+		
+		slot4.setBounds(10, 20, 130, 34);
+		slot4.setBackground(new Color(1,149,135));
+		slot4.setForeground(new Color(255,255,255));
 		panel.add(slot4);
 		
 
@@ -75,10 +97,20 @@ public class RecyclingGUI extends JFrame implements ActionListener  {
 		slot3.addActionListener(this); 
 		slot4.addActionListener(this); 
 
+		 
+		
+		
+		
+		receipt.setBounds(10, 20, 130, 34);
+		receipt.setBackground(new Color(102,169,34));
+		receipt.setForeground(new Color(255,255,255));
 		panel.add(receipt); 
-		receipt.addActionListener(this); 
+		
+		receipt.addActionListener(this);
 		
 		panel.add(no);
+		
+		
 		panel.add(count);
 		
 		
