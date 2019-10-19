@@ -64,31 +64,33 @@ public class RecyclingGUI extends JFrame implements ActionListener  {
 		super();
 		setSize(400, 200);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
+		setResizable(false); // setting resize ability false
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(210, 187, 187)); // adding background color to the panel
 		
 		 
 		slot1.setBounds(10, 20, 130, 34);
-		slot1.setBackground(new Color(1,149,135));
-		slot1.setForeground(new Color(255,255,255));
+		slot1.setBackground(new Color(1,149,135)); // adding background color to the Button
+		slot1.setForeground(new Color(255,255,255)); // adding foreground color to the Button
 		panel.add(slot1);
 		
 		
 		slot2.setBounds(10, 20, 130, 34);
-		slot2.setBackground(new Color(1,149,135));
-		slot2.setForeground(new Color(255,255,255));
+		slot2.setBackground(new Color(1,149,135));// adding background color to the Button
+		slot2.setForeground(new Color(255,255,255));// adding foreground color to the Button
 		panel.add(slot2);
 		
 		
 		
 		slot3.setBounds(10, 20, 130, 34);
-		slot3.setBackground(new Color(1,149,135));
-		slot3.setForeground(new Color(255,255,255));
+		slot3.setBackground(new Color(1,149,135));// adding background color to the Button
+		slot3.setForeground(new Color(255,255,255));// adding foreground color to the Button
 		panel.add(slot3);
 		
 		
 		slot4.setBounds(10, 20, 130, 34);
-		slot4.setBackground(new Color(1,149,135));
-		slot4.setForeground(new Color(255,255,255));
+		slot4.setBackground(new Color(1,149,135));// adding background color to the Button
+		slot4.setForeground(new Color(255,255,255));// adding foreground color to the Button
 		panel.add(slot4);
 		
 
@@ -102,8 +104,8 @@ public class RecyclingGUI extends JFrame implements ActionListener  {
 		
 		
 		receipt.setBounds(10, 20, 130, 34);
-		receipt.setBackground(new Color(102,169,34));
-		receipt.setForeground(new Color(255,255,255));
+		receipt.setBackground(new Color(102,169,34));// adding background color to the Button
+		receipt.setForeground(new Color(255,255,255));// adding foreground color to the Button
 		panel.add(receipt); 
 		
 		receipt.addActionListener(this);
@@ -114,13 +116,14 @@ public class RecyclingGUI extends JFrame implements ActionListener  {
 		panel.add(count);
 		
 		
-
+		
 
 		getContentPane().add(panel);
 		panel.repaint();
 
 		PrinterInterface myPrinter = new Display(); 
 		myPanel = new CustomerPanel(myPrinter); 
+		
 	}
 	
 	/**

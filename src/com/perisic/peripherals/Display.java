@@ -20,12 +20,14 @@ public class Display extends JFrame implements PrinterInterface {
 	 */	
 	public Display() {
 		super();
-		setSize(200, 600);
-		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);			
+		setSize(400, 600);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);	
+		setResizable(false); // setting Resizable ability fails
 		outputWindow = new JTextArea();
-		outputWindow.setForeground(Color.MAGENTA);
+		outputWindow.setForeground(Color.RED);
 		getContentPane().add(outputWindow);
 		setVisible(true); 
+		
 	}
 	/** 
 	 * Prints the text str to the screen. Any previous text will be overwritten. 
