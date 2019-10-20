@@ -10,6 +10,7 @@ public class Bottle extends DepositItem {
 	 * 
 	 */
 	public Bottle() { 
-		value = 18; 
+		value = 18;
+		name = "Bottle";
 	}
 }

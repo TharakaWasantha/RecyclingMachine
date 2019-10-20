@@ -16,7 +16,7 @@ public class ReceiptBasis {
 	 */
 	public void addItem(DepositItem item) { 
 		myItems.add(item); 
-		item.number = myItems.indexOf(item); 
+		item.number = myItems.indexOf(item)+1; //item index + 1
 	}
 	/**
 	 * Calculates a summary based on the items inserted.
@@ -25,13 +25,30 @@ public class ReceiptBasis {
 	public String computeSum() { 
 		String receipt = ""; 
 		int sum = 0; 
+		
+		//Receipt header
+		 receipt = receipt + "***********************************\n";
+		 receipt = receipt + "***********  Receipt  *************\n";
+		 receipt = receipt + "***********************************\n";
+		
+		 receipt = receipt + System.getProperty("line.separator");
+		
+		
 		for(int i=0; i < myItems.size(); i++ ) {
 			DepositItem item = myItems.get(i); 
-			receipt = receipt + item.number +": "+item.value +" ("+item.getName()+")"; 
+			receipt = receipt + item.number +": "+item.value +" "+item.name+""; 
 			receipt = receipt + System.getProperty("line.separator");
 			sum = sum + item.value; 
 		}
-		receipt = receipt + "Total: "+sum; 
+		receipt = receipt + "Total: "+sum+"\n"; 
+		receipt = receipt + System.getProperty("line.separator");
+		
+		
+		
+		//Receipt footer
+		 receipt = receipt + "***********************************\n";
+		 receipt = receipt + "*********  Thank You!  ***********\n";
+		 receipt = receipt + "***********************************\n";
 		return receipt; 
 	}
 }

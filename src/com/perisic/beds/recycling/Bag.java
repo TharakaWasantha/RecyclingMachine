@@ -11,5 +11,6 @@ public class Bag extends DepositItem {
 	 */
 	public Bag() { 
 		value = 10; 
+		name = "Bag";
 	}
 }

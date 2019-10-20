@@ -11,5 +11,6 @@ public class Crate extends DepositItem {
 	 */
 	public Crate() { 
 		value = 42; 
+		name = "Crate";
 	}
 }

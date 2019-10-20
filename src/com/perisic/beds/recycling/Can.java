@@ -11,5 +11,6 @@ public class Can extends DepositItem {
 	 */
 	public Can() { 
 		value = 16; 
+		name = "Can";
 	}
 }

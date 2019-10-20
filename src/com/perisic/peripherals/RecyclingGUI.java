@@ -20,10 +20,12 @@ import com.perisic.beds.recycling.PrinterInterface;
 public class RecyclingGUI extends JFrame implements ActionListener  {
 
 	private static final long serialVersionUID = -1077856539035586635L;
+	int count1;
+	
 	/**
 	 * Method that is called when an item has been entered into the machine or a receipt has been requested.
 	 */
-	int count1;
+	
 	
 	
 	public void actionPerformed(ActionEvent e) {
@@ -54,6 +56,7 @@ public class RecyclingGUI extends JFrame implements ActionListener  {
 	
 	JLabel no = new JLabel("No of Items : ");
 	JLabel count = new JLabel("0");
+	static JTextArea Text1 = new JTextArea(400,200);//test
 	
 
 
@@ -62,7 +65,7 @@ public class RecyclingGUI extends JFrame implements ActionListener  {
 
 	public RecyclingGUI() {
 		super();
-		setSize(400, 200);
+		setSize(400, 600);// test
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
 		setResizable(false); // setting resize ability false
 		JPanel panel = new JPanel();
@@ -114,6 +117,10 @@ public class RecyclingGUI extends JFrame implements ActionListener  {
 		
 		
 		panel.add(count);
+		
+		
+		Text1.setVisible(true);//test
+		panel.add(new JScrollPane(Text1));//test
 		
 		
 		

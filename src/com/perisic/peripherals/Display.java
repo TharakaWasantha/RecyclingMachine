@@ -36,6 +36,8 @@ public class Display extends JFrame implements PrinterInterface {
 	public void print(String str) { 
 		outputWindow.setText(str); 
 		outputWindow.repaint();
+		
+		
 	}
 
 }

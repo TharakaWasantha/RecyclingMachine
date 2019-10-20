@@ -19,7 +19,9 @@ public abstract class DepositItem {
 	/**
 	 * Returns the name of the item. 
 	 */
-	String getName() { 
-		return this.getClass().getSimpleName();   // needs something better. 
-	}
+	
+	String name ;
+	
+	
+	
 }
